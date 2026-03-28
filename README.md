@@ -1,7 +1,7 @@
 ### Xserver 自动续期脚本
 
 #### 构建步骤
-1. 创建项目，选择 pervite 私密项目
+1. 创建项目，选择 Private 私密项目
 
 2. 上传app.js 和 package.json
 
