@@ -5,9 +5,9 @@
 
 2. 上传app.js 和 package.json
 
-3. 点击 actions 菜单，create a custom action file
+3. 点击 actions 菜单， set up a workflow yourself,创建一个yml文件，文件名随意 
 
-4. 打开 .github/workflows/renew.yml 文件，全选复制内容粘贴进 yml文件编辑框 保存
+4. 打开 .github/workflows/renew.yml 文件，全选内容复制粘贴进yml文件编辑框 保存
 
 5. app.js 里填写账号密码 和 tg推送通知环境变量 保存
 
