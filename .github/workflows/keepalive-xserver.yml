@@ -1,4 +1,4 @@
-name: XServer Renew
+name: keepalive-xserver
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: 
 
 jobs:
-  renew-server:
+  keepalive-xserver:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +29,7 @@ jobs:
         ACCOUNTS: ${{ secrets.ACCOUNTS }}
         TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-      run: npm start || true
+      run: npm start
 
     - name: Upload Screenshots
       if: always() 
