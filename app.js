@@ -98,6 +98,7 @@ async function sendTelegramNotification(message, imagePath = null) {
             await page.getByRole('textbox', { name: 'XServerアカウントID または メールアドレス' }).fill(user.username);
             await page.locator('#user_password').fill(user.password);
             await page.getByRole('button', { name: 'ログインする' }).click();
+            console.log(`登录成功`);
 
             // 等待导航
             await page.getByRole('link', { name: 'ゲーム管理' }).click();
@@ -105,10 +106,11 @@ async function sendTelegramNotification(message, imagePath = null) {
 
             // 3. 升级 / 延长
             await page.getByRole('link', { name: 'アップグレード・期限延長' }).click();
+            console.log(`按下期限延長`);
 
             // 4. 选择 '延长期间' - 检查是否可用
             try {
-                await page.getByRole('link', { name: '期限を延長する' }).waitFor({ state: 'visible', timeout: 5000 });
+                await page.getByRole('link', { name: '期限を延長する' }).waitFor({ state: 'visible', timeout: 30000 });
                 await page.getByRole('link', { name: '期限を延長する' }).click();
             } catch (e) {
                 // 检查是否有具体的下一次更新时间提示
